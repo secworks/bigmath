@@ -89,7 +89,7 @@ module bigmult(
           if (opb_we)
             opb_reg[opb_addr] <= write_data;
 
-          det_reg <= dest_new;
+          dest_reg <= dest_new;
         end
     end // reg_update
 
@@ -97,7 +97,6 @@ module bigmult(
     begin : mult_logic
       dest_new = opa * opb;
     end
-
 
   always @*
     begin : api
